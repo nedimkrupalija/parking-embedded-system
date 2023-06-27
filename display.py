@@ -58,6 +58,7 @@ class Display:
         for i in range(x,self._SCR_WIDTH-x):
             self.display.pixel(x+i,y,color565(255,255,255))
 
+    
 
 
     def default_display(self):
@@ -70,6 +71,7 @@ class Display:
         self.display.print('DOBRODOSLI NA PARKING')
 
     def display_ok(self):
+        self.display.erase()
         self.display.set_font(tt32)
         self.display.set_color(color565(0, 128, 0), color565(0,0,0))
         self.display.set_pos(70,140)
@@ -77,8 +79,10 @@ class Display:
 
 
     def display_error(self):
+        self.display.erase()
+        
         self.display.set_font(tt32)
-        self.display.set_color(color(128, 0, 0), color565(0,0,0))
+        self.display.set_color(color565(128, 0, 0), color565(0,0,0))
         self.display.set_pos(70,140)
         self.display.print("PRISTUP ODBIJEN")
 
