@@ -1,4 +1,4 @@
-from machine import Pin, PWM
+from machine import Pin, PWM, Timer
 import time
 
 
@@ -44,10 +44,22 @@ class Servo:
         self.__angle_conversion_factor = (self.__max_u16_duty - self.__min_u16_duty) / (self.max_angle - self.min_angle)
         self.__motor = PWM(Pin(pin))
         self.__motor.freq(self.__servo_pwm_freq)
+        
+    def _closeRamp(self):
+        self.move(90)
+    
+    def callback_fun(self,timer): 
+        self._closeRamp()
+        
+    
     
     def openRamp(self):
         self.move(0)
-        time.sleep(5)
-        self.move(90)
+        timer = Timer(-1)
+        timer.init(mode=Timer.ONE_SHOT, period=5000, callback=self.callback_fun)
+#%cd parking
+#import main.py
+        
+    
         
         

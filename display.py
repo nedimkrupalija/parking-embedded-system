@@ -66,7 +66,7 @@ class Display:
         self.display.set_pos(0,0)
         self.display.set_font(glcdfont)
         self.display.set_color(color565(255,255,255),color565(0,0,0))
-        self.display.set_pos(70,140)
+        self.display.set_pos(40,100)
         self.display.set_font(tt32)
         self.display.print('DOBRODOSLI NA PARKING')
 
@@ -74,17 +74,18 @@ class Display:
         self.display.erase()
         self.display.set_font(tt32)
         self.display.set_color(color565(0, 128, 0), color565(0,0,0))
-        self.display.set_pos(70,140)
+        self.display.set_pos(40,100)
         self.display.print("PRISTUP ODOBREN")
+        self.default_display()
 
 
     def display_error(self):
         self.display.erase()
-        
         self.display.set_font(tt32)
         self.display.set_color(color565(128, 0, 0), color565(0,0,0))
-        self.display.set_pos(70,140)
+        self.display.set_pos(40,100)
         self.display.print("PRISTUP ODBIJEN")
+        self.default_display()
 
 
     def draw_circle(self,xpos0, ypos0, rad, col=color565(255, 255, 255)):
