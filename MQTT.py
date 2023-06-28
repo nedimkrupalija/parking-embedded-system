@@ -7,7 +7,7 @@ from machine import Pin, unique_id, PWM, ADC
 import ubinascii
 
 
-led1 = Pin(4, Pin.OUT)
+
 
 
 class MQTTClass:
@@ -34,7 +34,7 @@ class MQTTClass:
     print("Connecting to WiFi", end="")
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    wlan.connect("Wokwi-GUEST", "")
+    wlan.connect("ASUS", "12345678")
     while not wlan.isconnected():
       print(".", end="")
       time.sleep(0.1)
