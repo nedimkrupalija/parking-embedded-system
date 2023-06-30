@@ -35,7 +35,7 @@ from wiegand import Wiegand
 TEMAPROSTOR = 'projekat/parking'
 
 
-parkingSize = 1 # Broj parking mjesta
+parkingSize = 5 # Broj parking mjesta
 currentUsersList = [] # Primjer
 
 #def motora
@@ -44,9 +44,9 @@ servoMotor = Servo(pin=21)
 MQTTClient = MQTTClass()
 taster = Pin(0, Pin.IN)
 
-
+#41668, 21966 ID-evi kartica
 VALID_FACILITY_CODES = [ 67 ]
-VALID_CARDS = [ 41668, 21966]
+VALID_CARDS = [ 41668]
 
 #TESTNI LEDOVI / dodati pinove
 GREEN_LED = Pin(12, Pin.OUT)

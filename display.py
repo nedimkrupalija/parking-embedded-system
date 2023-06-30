@@ -127,4 +127,3 @@ class Display:
                 dx += 2
                 err += dx - (rad << 1)
 
-

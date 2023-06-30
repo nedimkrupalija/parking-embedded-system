@@ -57,7 +57,9 @@ class Servo:
         self.move(0)
         timer = Timer(-1)
         timer.init(mode=Timer.ONE_SHOT, period=5000, callback=self.callback_fun)
-
+#%cd parking
+#import main.py
+        
     
         
         

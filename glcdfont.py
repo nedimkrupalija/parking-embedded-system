@@ -291,4 +291,3 @@ def get_ch(ch):
     buf[0] = 0
     buf[1:]=_mvfont[offset:offset+5]
     return buf, 6
-

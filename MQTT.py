@@ -34,7 +34,7 @@ class MQTTClass:
     print("Connecting to WiFi", end="")
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    wlan.connect("ASUS", "12345678")
+    wlan.connect("ETF-Logosoft", "")
     while not wlan.isconnected():
       print(".", end="")
       time.sleep(0.1)
